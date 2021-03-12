@@ -1,0 +1,109 @@
+\documentclass[10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+%Pagination stuff.
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{flushleft}
+Name:\underline{\hspace{13cm}}Date:\underline{\hspace{2cm}}
+\end{flushleft}
+\begin{center}
+{\Large Math 1041-007 \hspace{0.5cm} Quiz \#4}
+\end{center}
+This quiz is due on Tuesday October 8th at the beginning of class. You are to work on your own. I will not accept late submissions. (No work = No Credit)
+\vspace{0.2 cm}
+\subsection*{Problem 1}Find each limit, if it exists. (Show work for partial credit)
+\begin{enumerate}[label=(\alph*)]
+    \item $\displaystyle\lim_{x\rightarrow 0}\frac{\sqrt{3+x}-\sqrt{3-x}}{x}$\vspace{4cm}
+    \item $\displaystyle \lim_{h\rightarrow 0}\frac{\frac{1}{(x+h)^2}-\frac{1}{x^2}}{h}$\vspace{4cm}
+\end{enumerate}
+\subsection*{Problem 2} Complete problem \#46 in Section 2.5 of the book. Show all work!!
+\clearpage
+\subsection*{Problem 3} Find the limit $\displaystyle\lim_{x\rightarrow -\infty}\frac{\sqrt{1+4x^6}}{2-x^3}$
+\vspace{7cm}
+\subsection*{Problem 4}
+Find the derivative of the function using the limit definition of derivative!
+\[
+f(x)=\frac{x^2-1}{2x-3}
+\]
+\clearpage
+\subsection*{Problem 5}
+Given $y=\frac{2x}{x^2+1}$.
+\begin{itemize}
+    \item[(i)] Find $y'$ (use your derivative rules!)\vspace{2.5cm}
+    \item[(ii)] Compute $y'(1)$.\vspace{2.5cm}
+    \item[(iii)] Write the equation of the tangent line to the curve at the point $(1,1)$\vspace{2.5cm}
+    \item[(iv)] Write the equation of the normal line to the curve at the point $(1,1)$.\vspace{2.5cm}
+\end{itemize}
+\subsection*{Problem 6}
+Use the intermediate value theorem to show that there is a root of the equation in the given interval. $x^5-x^3+3x-5=0$ on the interval $(1,2)$.
+\end{document}

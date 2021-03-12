@@ -1,0 +1,108 @@
+\documentclass[10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+%Pagination stuff.
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{flushleft}
+Name:\underline{\hspace{13cm}}Date:\underline{\hspace{2cm}}
+\end{flushleft}
+\begin{center}
+{\Large Math 1041-012 \hspace{0.5cm} Quiz \#4}
+\end{center}
+\vspace{0.2 cm}
+\subsection*{Problem 1}Find each limit, if it exists. (Show work for partial credit)
+\begin{enumerate}[label=(\alph*)]
+    \item $\displaystyle\lim_{x\rightarrow-\infty}\frac{3}{x^4}$\vspace{3cm}
+    \item $\displaystyle\lim_{x\rightarrow\infty}\frac{2-4x}{x+1}$\vspace{3cm}
+    \item $\displaystyle\lim_{x\rightarrow\infty}\frac{x^3-4x+1}{2x-x^3}$\vspace{3cm}
+    \item $\displaystyle\lim_{x\rightarrow-\infty}\frac{\sqrt{x^2+1}}{3+x}$\vspace{3cm}
+    \item $\displaystyle\lim_{x\rightarrow-\infty}\cos (x^2)$
+\end{enumerate}
+\clearpage
+\subsection*{Problem 2} Find the equation of the tangent line to the curve at the given point:
+\[
+y=\sqrt{x+1}\textrm{ at (3,2).}
+\]
+\vspace{6cm}
+\subsection*{Problem 3} The limit below represents the derivative of some function $f(x)$ at some number $a$:
+\[
+\lim_{h\rightarrow 0}\frac{e^{-2+h}-e^{-2}}{h}\vspace{0.5cm}
+\]
+What are $a=\rule{1cm}{0.05mm}$ and $f(x)=\rule{1cm}{0.05mm} $.
+\vspace{4cm}
+\subsection*{Bonus}
+Find the limit (show work for full credit, don't just write an answer!):
+\[
+\lim_{x\rightarrow 0^+}\tan^{-1}\left(\ln\left(x^{-1}\right)\right)
+\]
+\end{document}

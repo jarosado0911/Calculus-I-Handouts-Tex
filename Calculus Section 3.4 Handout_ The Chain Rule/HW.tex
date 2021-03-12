@@ -1,0 +1,142 @@
+\documentclass[12pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+%\usepackage{mdframed}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+%Pagination stuff.
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{flushleft}
+Name:\underline{\hspace{13cm}}Date:\underline{\hspace{2cm}}
+\end{flushleft}
+\begin{center}
+{\Large Math 1041-012 \hspace{0.5cm} Section 3.4: The Chain Rule}
+\end{center}
+%\vspace{0.2 cm}
+\subsection*{Motivating Example}
+How do we find
+\[
+\frac{d}{dx}\sqrt{x^2+1}=??
+\]
+\vspace{2cm}
+\begin{tcolorbox}
+\subsection*{The Chain Rule}
+Think of it as the ``Outside-Inside Rule''.\\ \\
+If $g$ is differentiable at $x$ and $f$ is differentiable at $g(x)$, then the composite function $F=f\circ g$ which is $F(x)=f(g(x))$ is differentiable at $x$ and is given by
+\[
+F'(x)=f'(g(x))\cdot g'(x)
+\]
+\vspace{2cm}
+\end{tcolorbox}
+\subsection*{Many Examples!}
+For each problem first identify the ``outside'' function and the ``inside'' function. Then use the Chain Rule to find the derivative!
+\begin{itemize}
+    \item[(a)] $F(x)=\sqrt{\sin x}$\vspace{3cm}
+    \item[(b)] $(\sin(x^2))'$\vspace{3cm}
+    \item[(c)] $\frac{d}{dx}\sin^2(x)$\vspace{3cm}
+    \item[(d)] $\frac{d}{d\theta}\sin(\cos\theta)$\vspace{3cm}
+\end{itemize}
+\begin{tcolorbox}
+\subsection*{Power-Chain Rule} If $y=[f(x)]^n$ then
+\[
+y'=n[f(x)]^{n-1}\cdot f'(x)
+\]
+\end{tcolorbox}
+\subsection*{Even More Examples!!}
+Use the power chain rule to differentiate each function!
+\begin{itemize}
+    \item[(a)]$y=(x^3-1)^{100}$\vspace{4cm}
+    \item[(b)]$f(x)=\frac{1}{\sqrt[3]{x^2+x+1}}$\vspace{3cm}\raggedbottom\clearpage
+    \item[(c)]$g(t)=\left(\frac{t-2}{2t+1}\right)^9$\vspace{4cm}
+    \item[(d)]$y=(2x+1)^5(x^3-x+1)^6$\vspace{3cm}
+\end{itemize}
+\subsection*{Miscellaneous Examples}
+Find the derivative of each!
+\begin{itemize}
+    \item[(a)] $y=e^{\sin x}$\vspace{3cm}
+    \item[(b)] $f(x)=\sin(\cos(\tan x)))$\vspace{5cm}
+    \item[(c)] $y=e^{\sin(3\theta)}$\vspace{3cm}
+\end{itemize}
+\raggedbottom
+\clearpage
+\begin{tcolorbox}
+\subsection*{A random derivative rule! Okay}
+\[
+\frac{d}{dx}b^x=b^x\ln b
+\]
+(what happens if you let $b=e$?)
+\end{tcolorbox}
+\subsection*{A few more examples}
+\begin{itemize}
+    \item[(a)] $y=2^{\tan x}$\vspace{5cm}
+    \item[(b)] $f(x)=\pi^{2^x}$
+\end{itemize}
+\end{document}

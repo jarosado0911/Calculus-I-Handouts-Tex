@@ -1,0 +1,124 @@
+\documentclass[10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+%Pagination stuff.
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{flushleft}
+Name:\underline{\hspace{13cm}}Date:\underline{\hspace{2cm}}
+\end{flushleft}
+\begin{center}
+{\Large Math 1041-012 \hspace{0.5cm} Classwork \#4}
+\end{center}
+\vspace{0.2 cm}
+\subsection*{Problem 1}
+Evaluate each limit. \textit{Hint: use Squeeze Theorem!}
+\begin{enumerate}[label=(\alph*)]
+    \item $\displaystyle\lim_{x\rightarrow 0+}\sqrt{x}e^{\cos(\pi/x)}$\vspace{2cm}
+    \item 
+    $\displaystyle \lim_{\theta\rightarrow \frac{\pi}{2}}\cos\theta \cos(\tan\theta))$\vspace{2cm}
+    \item $\displaystyle\lim_{t\rightarrow 0}(2^t-1)\cos(1/t)$\vspace{2cm}
+\end{enumerate}
+\subsection*{Problem 2}
+Find each limit if it exists!
+\begin{enumerate}[label=(\alph*)]
+    \item $\displaystyle\lim_{h\rightarrow 0^+}\frac{h^2-4}{h}$\vspace{1cm}
+    \item $\displaystyle\lim_{x\rightarrow 2^-}\frac{\sqrt{3-x}}{x-2}$\vspace{1cm}
+    \item$\displaystyle\lim_{y\rightarrow\pi}\frac{\cos y}{y-\pi}$\vspace{1cm}
+    \item $\displaystyle\lim_{x\rightarrow 0}\frac{\sin x+x}{x}$\vspace{1cm}
+    \item $\displaystyle\lim_{x\rightarrow 0}\frac{\sin x+2}{x}$
+\end{enumerate}
+\subsection*{Problem 3}
+The graph of $f(x)$ is given below!
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis x line=middle, axis y line=middle,
+  ymin=-2, ymax=4, ytick={-2,...,4}, ylabel=$y$,
+  xmin=-6, xmax=4, xtick={-6,...,4}, xlabel=$x$,
+  axis line style={<->}, width=12cm,height=8cm
+]
+\addplot[<-,domain=-6:-4,black]{-0.5*x+cos(3*deg(x))};
+\addplot[domain=-3:-1,black] {2*sin(deg(x))+3};
+\addplot[domain=-4:-3,black]{x+5.7};
+\addplot[domain=-1:1,black] {-0.5403*x^2+1.8574};
+\addplot[domain=1:2,black]{2.31+1/-x};
+\addplot[<->,domain=2:3.5,black]{3-1/(x-2)};
+%\addplot[->,domain=6:10,black]{1/(x-6)};
+\draw[dashed] (axis cs:2,4) -- (axis cs:2,-2);
+\addplot[holdot] coordinates{(-4,2.8)(-2,1.18)(3,2)};
+\addplot[soldot] coordinates{(2,1.81)(-4,1.7)(3,1)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Where is $f(x)$ discontinuous? State the type of discontinuity and \textbf{\underline{why}}?
+\end{document}

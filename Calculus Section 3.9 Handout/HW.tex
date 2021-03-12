@@ -1,0 +1,117 @@
+\documentclass[10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumitem}
+%\usepackage{mdframed}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+%Pagination stuff.
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+\begin{document}
+\begin{flushleft}
+Name:\underline{\hspace{13cm}}Date:\underline{\hspace{2cm}}
+\end{flushleft}
+\begin{center}
+{\Large Math 1041-012 \hspace{0.5cm} Section 3.9: Related Rates}
+\end{center}
+%\vspace{0.2 cm}
+
+\begin{tcolorbox}
+\subsection*{Problem Solving for Related Rates}
+\begin{enumerate}
+    \item Read and underline key words in the word problem. What are they looking for? $dy/dt$ or $dV/dt$ or $dS/dt$...
+    \item Draw a figure if necessary.
+    \item There is usually a formula that goes with the problem.
+    \item Relate given numbers to the formula, you may need to reduce the number of variable.
+    \item Differentiate the changing quantities with respect to time.
+    \item Solve for ``$dy/dt$".
+\end{enumerate}
+\end{tcolorbox}
+\subsection*{Example 1: The balloon problem again}
+Air is being pumped into a spherical balloon so that its volume increases at a rate of 100 centimeters per second. How fast is the radius of the balloon increasing when the diameter is 50 cm?
+\begin{enumerate}[label=(\alph*)]
+    \item Make a sketch of the problem. Indicate dimensions with variables. What formula goes with the picture?\vspace{4cm} 
+    \item In the problem what are the quantities that are changing? What are you asked to find?\vspace{2cm}
+    \item What quantities do they give you?\vspace{2cm}
+    \item Differentiate your formula with respect to time. Then use given quantities to solve the problem.
+\end{enumerate}
+\clearpage
+\subsection*{Example 2: The ladder problem}
+A 10 foot ladder leans against a vertical wall. If the bottom of the ladder slides away from the wall at a rate of 1 foot per second, how fast is the top of the ladder sliding down the wall when the bottom of the ladder is six feet from the wall?
+\begin{enumerate}[label=(\alph*)]
+    \item Make a sketch of the problem. Indicate dimensions with variables. What formula goes with the picture?\vspace{4cm} 
+    \item In the problem what are the quantities that are changing? What are you asked to find?\vspace{2cm}
+    \item What quantities do they give you?\vspace{2cm}
+    \item Differentiate your formula with respect to time. Then use given quantities to solve the problem.
+\end{enumerate}
+\clearpage
+\subsection*{Example 3: The conical water tank} A water tank has the shape of an inverted circular cone with base radius 2 meters and height 4 meters. If the water is being pumped into the tank at a rate of 3 cubic meters per min, find the rate at which the water level is rising when the water is 3 meters deep.
+\clearpage
+\subsection*{Example 4: Traveling Cars} Car A is traveling west at 50 miles per hour and Car B is traveling north at 60 miles per hour. Both cars are heading to the same intersection of the two roads. At what rate are the cars approaching each other when Car A is 0.3 miles from the intersection and Car B is 0.4 miles from the intersection?
+\end{document}
